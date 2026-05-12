@@ -3,13 +3,13 @@
 	"id": "topcomment",
 	"version": "${version}",
 	"name": "Top Comment Mod",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"description": "egg",
 	"authors": [
-		"Me!"
+		"Sealing99"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"homepage": "",
+		"sources": ""
 	},
 	"license": "CC0-1.0",
 	"icon": "assets/topcomment/icon.png",
@@ -20,6 +20,9 @@
 		],
 		"fabric-datagen": [
 			"net.sealing99.topcomment.TopCommentModDataGenerator"
+		],
+		"client": [
+			"net.sealing99.topcomment.TopCommentModClient"
 		]
 	},
 	"mixins": [
