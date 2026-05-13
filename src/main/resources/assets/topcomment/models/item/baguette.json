@@ -1,0 +1,38 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "topcomment:item/baguette"
+  },
+  "oversized_in_gui": true,
+  "display": {
+    "gui": {
+      "rotation": [0, 0, 0],
+      "translation": [8, 8, 8],
+      "scale": [2, 2, 2]
+    },
+    "ground": {
+      "scale": [1.5, 1.5, 1.5],
+      "translation": [0, 6, 0]
+    },
+    "firstperson_righthand": {
+      "scale": [1.5, 1.5, 1.5],
+      "rotation": [0, -90, 0],
+      "translation": [0, 6, 0]
+    },
+    "firstperson_lefthand": {
+      "scale": [1.5, 1.5, 1.5],
+      "rotation": [0, -90, 0],
+      "translation": [0, 6, 0]
+    },
+    "thirdperson_righthand": {
+      "scale": [1.5, 1.5, 1.5],
+      "rotation": [0, 0, 0],
+      "translation": [6, 6, 0]
+    },
+    "thirdperson_lefthand": {
+      "scale": [1.5, 1.5, 1.5],
+      "rotation": [0, 0, 0],
+      "translation": [6, 6, 0]
+    }
+  }
+}
