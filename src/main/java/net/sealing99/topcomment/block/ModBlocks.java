@@ -11,7 +11,6 @@ import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 import net.sealing99.topcomment.TopCommentMod;
 import net.sealing99.topcomment.block.custom.triangularcake.TriangularCakeBlock;
-import net.sealing99.topcomment.block.custom.triangularcake.entity.ModBlockEntities;
 import net.sealing99.topcomment.block.custom.triangularcake.item.TriangularCakeBlockItem;
 
 public class ModBlocks {
