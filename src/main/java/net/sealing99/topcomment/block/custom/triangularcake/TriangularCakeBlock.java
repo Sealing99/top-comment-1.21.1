@@ -1,4 +1,4 @@
-package net.sealing99.topcomment.block.custom;
+package net.sealing99.topcomment.block.custom.triangularcake;
 
 import com.mojang.serialization.MapCodec;
 import net.minecraft.block.*;
@@ -10,8 +10,7 @@ import net.minecraft.state.property.Properties;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
-import net.sealing99.topcomment.block.entity.ModBlockEntities;
-import net.sealing99.topcomment.block.entity.TriangularCakeBlockEntity;
+import net.sealing99.topcomment.block.custom.triangularcake.entity.TriangularCakeBlockEntity;
 import org.jetbrains.annotations.Nullable;
 
 public class TriangularCakeBlock extends BlockWithEntity {

@@ -2,9 +2,6 @@ package net.sealing99.topcomment.block;
 
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
-import net.minecraft.block.BlockWithEntity;
-import net.minecraft.block.entity.BlockEntity;
-import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.block.piston.PistonBehavior;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
@@ -13,11 +10,12 @@ import net.minecraft.registry.Registry;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 import net.sealing99.topcomment.TopCommentMod;
-import net.sealing99.topcomment.block.custom.TriangularCakeBlock;
-import net.sealing99.topcomment.block.entity.ModBlockEntities;
+import net.sealing99.topcomment.block.custom.triangularcake.TriangularCakeBlock;
+import net.sealing99.topcomment.block.custom.triangularcake.entity.ModBlockEntities;
+import net.sealing99.topcomment.block.custom.triangularcake.item.TriangularCakeBlockItem;
 
 public class ModBlocks {
-    public static final Block TRIANGULAR_CAKE = registerBlock("triangular_cake",
+    public static final Block TRIANGULAR_CAKE = registerTriangularCakeBlock("triangular_cake",
             new TriangularCakeBlock(AbstractBlock.Settings.create()
                     .strength(0.5f)
                     .nonOpaque()
@@ -26,6 +24,14 @@ public class ModBlocks {
                     .pistonBehavior(PistonBehavior.DESTROY)
             )
     );
+
+    private static Block registerTriangularCakeBlock(String name, Block block) {
+        Registry.register(
+                Registries.ITEM, Identifier.of(TopCommentMod.MOD_ID, name),
+                new TriangularCakeBlockItem(block, new Item.Settings())
+        );
+        return Registry.register(Registries.BLOCK, Identifier.of(TopCommentMod.MOD_ID, name), block);
+    }
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);

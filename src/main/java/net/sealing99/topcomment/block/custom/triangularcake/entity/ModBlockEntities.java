@@ -1,4 +1,4 @@
-package net.sealing99.topcomment.block.entity;
+package net.sealing99.topcomment.block.custom.triangularcake.entity;
 
 import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.registry.Registries;

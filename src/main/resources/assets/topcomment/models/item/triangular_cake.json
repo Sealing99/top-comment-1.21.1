@@ -1,6 +1,3 @@
 {
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "topcomment:item/triangular_cake_icon"
-  }
+  "parent": "builtin/entity"
 }

@@ -1,10 +1,11 @@
-package net.sealing99.topcomment.block.renderer;
+package net.sealing99.topcomment.block.custom.triangularcake.renderer;
 
 import net.minecraft.client.render.VertexConsumer;
 import net.minecraft.client.render.VertexConsumerProvider;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.util.math.RotationAxis;
-import net.sealing99.topcomment.block.entity.TriangularCakeBlockEntity;
+import net.sealing99.topcomment.block.custom.triangularcake.TriangularCakeBlock;
+import net.sealing99.topcomment.block.custom.triangularcake.entity.TriangularCakeBlockEntity;
 import software.bernie.geckolib.cache.object.BakedGeoModel;
 import software.bernie.geckolib.renderer.GeoBlockRenderer;
 
@@ -17,8 +18,7 @@ public class TriangularCakeBlockRenderer extends GeoBlockRenderer<TriangularCake
     public void preRender(MatrixStack poseStack, TriangularCakeBlockEntity animatable, BakedGeoModel model, VertexConsumerProvider bufferSource, VertexConsumer buffer, boolean isReRender, float partialTick, int packedLight, int packedOverlay, int colour) {
         poseStack.push();
 
-        // Adjust rotation based on facing direction
-        switch (animatable.getCachedState().get(net.sealing99.topcomment.block.custom.TriangularCakeBlock.FACING)) {
+        switch (animatable.getCachedState().get(TriangularCakeBlock.FACING)) {
             case NORTH:
                 break;
             case SOUTH:
