@@ -1,3 +1,5 @@
 {
-  "item.topcomment.baguette": "Baguette"
+  "item.topcomment.baguette": "Baguette",
+  "itemgroup.topcomment.top_comment_group": "Top Comment Mod",
+  "block.topcomment.triangular_cake": "Triangular Cake"
 }

@@ -2,6 +2,7 @@ package net.sealing99.topcomment;
 
 import net.fabricmc.api.ModInitializer;
 
+import net.sealing99.topcomment.block.ModBlocks;
 import net.sealing99.topcomment.item.ModItemGroups;
 import net.sealing99.topcomment.item.ModItems;
 import org.slf4j.Logger;
@@ -15,5 +16,6 @@ public class TopCommentMod implements ModInitializer {
 	public void onInitialize() {
 		ModItems.registerModItems();
 		ModItemGroups.registerItemGroups();
+		ModBlocks.registerModBlocks();
 	}
 }

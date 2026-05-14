@@ -7,6 +7,7 @@ import net.minecraft.registry.Registry;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import net.sealing99.topcomment.TopCommentMod;
+import net.sealing99.topcomment.block.ModBlocks;
 
 public class ModItemGroups {
     public static final ItemGroup TOP_COMMENT_GROUP = Registry.register(
@@ -17,6 +18,7 @@ public class ModItemGroups {
                     .icon(() -> new net.minecraft.item.ItemStack(ModItems.BAGUETTE))
                     .entries((DisplayContext, entries) -> {
                             entries.add(ModItems.BAGUETTE);
+                            entries.add(ModBlocks.TRIANGULAR_CAKE);
                     })
 
                     .build()
