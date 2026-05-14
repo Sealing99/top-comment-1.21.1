@@ -17,7 +17,7 @@ public class TriangularCakeBlockEntity extends BlockEntity implements GeoBlockEn
 
     @Override
     public void registerControllers(AnimatableManager.ControllerRegistrar controllerRegistrar) {
-        // Register animation controllers here if needed
+
     }
 
     @Override
