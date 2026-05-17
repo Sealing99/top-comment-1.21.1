@@ -5,6 +5,7 @@ import net.fabricmc.api.ModInitializer;
 import net.sealing99.topcomment.block.ModBlocks;
 import net.sealing99.topcomment.item.ModItemGroups;
 import net.sealing99.topcomment.item.ModItems;
+import net.sealing99.topcomment.modify.ModLootModifier;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -17,5 +18,6 @@ public class TopCommentMod implements ModInitializer {
 		ModItems.registerModItems();
 		ModItemGroups.registerItemGroups();
 		ModBlocks.registerModBlocks();
+		ModLootModifier.registerModifications();
 	}
 }

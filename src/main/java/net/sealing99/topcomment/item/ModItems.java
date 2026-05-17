@@ -8,6 +8,7 @@ import net.sealing99.topcomment.TopCommentMod;
 
 public class ModItems {
     public static final Item BAGUETTE = registerItem("baguette", new Item(new Item.Settings().food(ModFoodComponents.BAGUETTE)));
+    public static final Item BANANA = registerItem("banana", new Item(new Item.Settings().food(ModFoodComponents.BANANA)));
 
     private static Item registerItem(String name, Item item ) {
         return Registry.register(Registries.ITEM, Identifier.of(TopCommentMod.MOD_ID, name), item);

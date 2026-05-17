@@ -10,6 +10,7 @@ import net.minecraft.registry.Registry;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 import net.sealing99.topcomment.TopCommentMod;
+import net.sealing99.topcomment.block.custom.thunderking.ThunderKingBlock;
 import net.sealing99.topcomment.block.custom.triangularcake.TriangularCakeBlock;
 import net.sealing99.topcomment.block.custom.triangularcake.item.TriangularCakeBlockItem;
 
@@ -21,6 +22,16 @@ public class ModBlocks {
                     .breakInstantly()
                     .sounds(BlockSoundGroup.WOOL)
                     .pistonBehavior(PistonBehavior.DESTROY)
+            )
+    );
+
+    public static final Block THUNDER_KING = registerBlock("thunder_king",
+            new ThunderKingBlock(AbstractBlock.Settings.create()
+                    .strength(1.f)
+                    .nonOpaque()
+                    .sounds(BlockSoundGroup.SCAFFOLDING)
+                    .pistonBehavior(PistonBehavior.DESTROY)
+
             )
     );
 

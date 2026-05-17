@@ -19,6 +19,8 @@ public class ModItemGroups {
                     .entries((DisplayContext, entries) -> {
                             entries.add(ModItems.BAGUETTE);
                             entries.add(ModBlocks.TRIANGULAR_CAKE);
+                            entries.add(ModBlocks.THUNDER_KING);
+                            entries.add(ModItems.BANANA);
                     })
 
                     .build()
