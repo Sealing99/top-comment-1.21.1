@@ -4,6 +4,7 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.data.server.recipe.RecipeExporter;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
+import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
 import net.minecraft.item.Items;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.RegistryWrapper;
@@ -27,5 +28,34 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .input('B', Items.BREAD)
                 .criterion(hasItem(Items.BREAD), conditionsFromItem(Items.BREAD))
                 .offerTo(exporter, Identifier.of(TopCommentMod.MOD_ID, "baguette"));
+
+        // Dorito from 4 corn_seed
+        ShapedRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.DORITO, 1)
+                .pattern("SS")
+                .pattern("SS")
+                .input('S', ModItems.CORN_SEED)
+                .criterion(hasItem(ModItems.CORN_SEED), conditionsFromItem(ModItems.CORN_SEED))
+                .offerTo(exporter, Identifier.of(TopCommentMod.MOD_ID, "dorito_from_seeds"));
+
+        // 9 Dorito into 1 Bag
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.DORITO_BAG, 1)
+                .pattern("DDD")
+                .pattern("DDD")
+                .pattern("DDD")
+                .input('D', ModItems.DORITO)
+                .criterion(hasItem(ModItems.DORITO), conditionsFromItem(ModItems.DORITO))
+                .offerTo(exporter, Identifier.of(TopCommentMod.MOD_ID, "dorito_bag_from_doritos"));
+
+        // Dorito Bag into 9 Dorito
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.DORITO, 9)
+                .input(ModItems.DORITO_BAG)
+                .criterion(hasItem(ModItems.DORITO_BAG), conditionsFromItem(ModItems.DORITO_BAG))
+                .offerTo(exporter, Identifier.of(TopCommentMod.MOD_ID, "dorito_from_bag"));
+
+        // Corn -> 9 Corn Seeds
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.CORN_SEED, 9)
+                .input(ModItems.CORN)
+                .criterion(hasItem(ModItems.CORN), conditionsFromItem(ModItems.CORN))
+                .offerTo(exporter, Identifier.of(TopCommentMod.MOD_ID, "corn_seed"));
     }
 }

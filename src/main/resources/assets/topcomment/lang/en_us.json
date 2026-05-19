@@ -1,7 +1,17 @@
 {
-  "item.topcomment.baguette": "Baguette",
   "itemgroup.topcomment.top_comment_group": "Top Comment Mod",
+
+  "item.topcomment.baguette": "Baguette",
+
   "block.topcomment.triangular_cake": "Triangular Cake",
+
   "block.topcomment.thunder_king": "Thunder King Firework",
-  "item.topcomment.banana": "Banana"
+
+  "item.topcomment.banana": "Banana",
+
+  "item.topcomment.corn": "Corn",
+  "item.topcomment.corn_seed": "Corn Seed",
+  "item.topcomment.dorito": "Dorito",
+  "item.topcomment.dorito_bag": "Bag of Doritos",
+  "block.topcomment.corn_crop": "Corn Crop"
 }

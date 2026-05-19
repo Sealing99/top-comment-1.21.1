@@ -1,4 +1,4 @@
-package net.sealing99.topcomment.block.custom.thunderking;
+package net.sealing99.topcomment.block.custom;
 
 import com.mojang.serialization.MapCodec;
 import net.minecraft.block.*;
@@ -27,8 +27,6 @@ import net.minecraft.world.World;
 import net.minecraft.world.WorldView;
 import net.sealing99.topcomment.util.DelayedEventManager;
 import org.jetbrains.annotations.Nullable;
-
-import java.util.Objects;
 
 public class ThunderKingBlock extends HorizontalFacingBlock {
     public static final MapCodec<ThunderKingBlock> CODEC = createCodec(ThunderKingBlock::new);

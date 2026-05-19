@@ -21,6 +21,10 @@ public class ModItemGroups {
                             entries.add(ModBlocks.TRIANGULAR_CAKE);
                             entries.add(ModBlocks.THUNDER_KING);
                             entries.add(ModItems.BANANA);
+                            entries.add(ModItems.CORN);
+                            entries.add(ModItems.CORN_SEED);
+                            entries.add(ModItems.DORITO);
+                            entries.add(ModItems.DORITO_BAG);
                     })
 
                     .build()

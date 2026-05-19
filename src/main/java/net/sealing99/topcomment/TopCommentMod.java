@@ -2,6 +2,7 @@ package net.sealing99.topcomment;
 
 import net.fabricmc.api.ModInitializer;
 
+import net.fabricmc.fabric.api.registry.CompostingChanceRegistry;
 import net.sealing99.topcomment.block.ModBlocks;
 import net.sealing99.topcomment.item.ModItemGroups;
 import net.sealing99.topcomment.item.ModItems;
@@ -19,5 +20,7 @@ public class TopCommentMod implements ModInitializer {
 		ModItemGroups.registerItemGroups();
 		ModBlocks.registerModBlocks();
 		ModLootModifier.registerModifications();
+
+		CompostingChanceRegistry.INSTANCE.add(ModItems.CORN, 0.15f);
 	}
 }

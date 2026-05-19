@@ -2,6 +2,7 @@ package net.sealing99.topcomment.block;
 
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
+import net.minecraft.block.MapColor;
 import net.minecraft.block.piston.PistonBehavior;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
@@ -10,7 +11,8 @@ import net.minecraft.registry.Registry;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 import net.sealing99.topcomment.TopCommentMod;
-import net.sealing99.topcomment.block.custom.thunderking.ThunderKingBlock;
+import net.sealing99.topcomment.block.custom.CornCropBlock;
+import net.sealing99.topcomment.block.custom.ThunderKingBlock;
 import net.sealing99.topcomment.block.custom.triangularcake.TriangularCakeBlock;
 import net.sealing99.topcomment.block.custom.triangularcake.item.TriangularCakeBlockItem;
 
@@ -35,11 +37,26 @@ public class ModBlocks {
             )
     );
 
+    public static final Block CORN_CROP = registerBlockWithoutBlockItem("corn_crop",
+            new CornCropBlock(AbstractBlock.Settings.create()
+                    .noCollision()
+                    .ticksRandomly()
+                    .breakInstantly()
+                    .sounds(BlockSoundGroup.CROP)
+                    .pistonBehavior(PistonBehavior.DESTROY)
+                    .mapColor(MapColor.DARK_GREEN)
+            )
+    );
+
     private static Block registerTriangularCakeBlock(String name, Block block) {
         Registry.register(
                 Registries.ITEM, Identifier.of(TopCommentMod.MOD_ID, name),
                 new TriangularCakeBlockItem(block, new Item.Settings())
         );
+        return Registry.register(Registries.BLOCK, Identifier.of(TopCommentMod.MOD_ID, name), block);
+    }
+
+    private static Block registerBlockWithoutBlockItem(String name, Block block) {
         return Registry.register(Registries.BLOCK, Identifier.of(TopCommentMod.MOD_ID, name), block);
     }
 
