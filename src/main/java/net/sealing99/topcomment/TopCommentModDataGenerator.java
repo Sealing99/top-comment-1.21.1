@@ -2,9 +2,12 @@ package net.sealing99.topcomment;
 
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
-import net.sealing99.topcomment.datagen.ModLootTableProvider;
-import net.sealing99.topcomment.datagen.ModModelProvider;
-import net.sealing99.topcomment.datagen.ModRecipeProvider;
+import net.minecraft.registry.Registries;
+import net.minecraft.registry.RegistryBuilder;
+import net.minecraft.registry.RegistryKeys;
+import net.sealing99.topcomment.datagen.*;
+import net.sealing99.topcomment.world.ModConfiguredFeatures;
+import net.sealing99.topcomment.world.ModPlacedFeatures;
 
 public class TopCommentModDataGenerator implements DataGeneratorEntrypoint {
 	@Override
@@ -14,5 +17,14 @@ public class TopCommentModDataGenerator implements DataGeneratorEntrypoint {
 		pack.addProvider(ModModelProvider::new);
 		pack.addProvider(ModRecipeProvider::new);
 		pack.addProvider(ModLootTableProvider::new);
+		pack.addProvider(ModRegistryDataGenerator::new);
+		pack.addProvider(ModBlockTagProvider::new);
+		pack.addProvider(ModItemTagProvider::new);
+	}
+
+	@Override
+	public void buildRegistry(RegistryBuilder registryBuilder) {
+		registryBuilder.addRegistry(RegistryKeys.CONFIGURED_FEATURE, ModConfiguredFeatures::bootstrap);
+		registryBuilder.addRegistry(RegistryKeys.PLACED_FEATURE, ModPlacedFeatures::bootstrap);
 	}
 }

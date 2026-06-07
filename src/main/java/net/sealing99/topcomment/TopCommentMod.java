@@ -7,6 +7,7 @@ import net.sealing99.topcomment.block.ModBlocks;
 import net.sealing99.topcomment.item.ModItemGroups;
 import net.sealing99.topcomment.item.ModItems;
 import net.sealing99.topcomment.modify.ModLootModifier;
+import net.sealing99.topcomment.world.gen.ModWorldGeneration;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -20,6 +21,7 @@ public class TopCommentMod implements ModInitializer {
 		ModItemGroups.registerItemGroups();
 		ModBlocks.registerModBlocks();
 		ModLootModifier.registerModifications();
+		ModWorldGeneration.generateModWorldGen();
 
 		CompostingChanceRegistry.INSTANCE.add(ModItems.CORN, 0.15f);
 	}
