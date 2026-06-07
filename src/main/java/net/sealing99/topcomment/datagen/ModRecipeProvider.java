@@ -2,15 +2,18 @@ package net.sealing99.topcomment.datagen;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
+import net.fabricmc.fabric.api.registry.FabricBrewingRecipeRegistryBuilder;
 import net.minecraft.data.server.recipe.RecipeExporter;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
 import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
 import net.minecraft.item.Items;
+import net.minecraft.potion.Potions;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.util.Identifier;
 import net.sealing99.topcomment.TopCommentMod;
 import net.sealing99.topcomment.item.ModItems;
+import net.sealing99.topcomment.item.ModPotions;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -57,5 +60,9 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .input(ModItems.CORN)
                 .criterion(hasItem(ModItems.CORN), conditionsFromItem(ModItems.CORN))
                 .offerTo(exporter, Identifier.of(TopCommentMod.MOD_ID, "corn_seed"));
+
+        FabricBrewingRecipeRegistryBuilder.BUILD.register(builder -> {
+            builder.registerPotionRecipe(Potions.AWKWARD, ModItems.DORITO_BAG, ModPotions.MOVEMENT_POTION);
+        });
     }
 }

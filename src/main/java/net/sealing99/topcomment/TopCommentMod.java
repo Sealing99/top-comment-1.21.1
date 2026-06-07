@@ -4,8 +4,10 @@ import net.fabricmc.api.ModInitializer;
 
 import net.fabricmc.fabric.api.registry.CompostingChanceRegistry;
 import net.sealing99.topcomment.block.ModBlocks;
+import net.sealing99.topcomment.effect.ModEffects;
 import net.sealing99.topcomment.item.ModItemGroups;
 import net.sealing99.topcomment.item.ModItems;
+import net.sealing99.topcomment.item.ModPotions;
 import net.sealing99.topcomment.modify.ModLootModifier;
 import net.sealing99.topcomment.world.gen.ModWorldGeneration;
 import org.slf4j.Logger;
@@ -22,6 +24,8 @@ public class TopCommentMod implements ModInitializer {
 		ModBlocks.registerModBlocks();
 		ModLootModifier.registerModifications();
 		ModWorldGeneration.generateModWorldGen();
+		ModEffects.registerEffects();
+		ModPotions.registerPotions();
 
 		CompostingChanceRegistry.INSTANCE.add(ModItems.CORN, 0.15f);
 	}

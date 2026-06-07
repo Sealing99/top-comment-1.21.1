@@ -13,5 +13,10 @@
   "item.topcomment.corn_seed": "Corn Seed",
   "item.topcomment.dorito": "Dorito",
   "item.topcomment.dorito_bag": "Bag of Doritos",
-  "block.topcomment.corn_crop": "Corn Crop"
+  "block.topcomment.corn_crop": "Corn Crop",
+
+  "effect.topcomment.movement": "Movement Boost",
+  "item.minecraft.potion.effect.movement_potion": "Potion of Movement Boost",
+  "item.minecraft.splash_potion.effect.movement_potion": "Splash Potion of Movement Boost",
+  "item.minecraft.lingering_potion.effect.movement_potion": "Lingering Potion of Movement Boost"
 }
