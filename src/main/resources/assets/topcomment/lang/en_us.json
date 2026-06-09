@@ -18,5 +18,7 @@
   "effect.topcomment.movement": "Movement Boost",
   "item.minecraft.potion.effect.movement_potion": "Potion of Movement Boost",
   "item.minecraft.splash_potion.effect.movement_potion": "Splash Potion of Movement Boost",
-  "item.minecraft.lingering_potion.effect.movement_potion": "Lingering Potion of Movement Boost"
+  "item.minecraft.lingering_potion.effect.movement_potion": "Lingering Potion of Movement Boost",
+
+  "entity.minecraft.villager.seal": "Seal"
 }

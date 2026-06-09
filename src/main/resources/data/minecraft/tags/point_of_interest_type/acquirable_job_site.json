@@ -1,0 +1,9 @@
+{
+ "replace": false,
+  "values": [
+    {
+        "id": "topcomment:seal_poi",
+        "required": false
+    }
+  ]
+}
