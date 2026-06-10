@@ -3,17 +3,23 @@ package net.sealing99.topcomment;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.rendering.v1.BlockEntityRendererRegistry;
+import net.fabricmc.fabric.api.client.rendering.v1.EntityModelLayerRegistry;
+import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.minecraft.client.render.RenderLayer;
+import net.minecraft.client.render.entity.model.EntityModel;
 import net.sealing99.topcomment.block.ModBlockEntities;
 import net.sealing99.topcomment.block.ModBlocks;
 import net.sealing99.topcomment.block.custom.triangularcake.entity.TriangularCakeBlockEntity;
 import net.sealing99.topcomment.block.custom.triangularcake.renderer.TriangularCakeBlockModel;
+import net.sealing99.topcomment.entity.ModEntities;
+import net.sealing99.topcomment.entity.client.TenThousandTntEntityRenderer;
 import software.bernie.geckolib.renderer.GeoBlockRenderer;
 
 public class TopCommentModClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
         registerBlockEntityRenderers();
+        registerEntityRenderers();
 
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.CORN_CROP, RenderLayer.getCutout());
     }
@@ -23,5 +29,9 @@ public class TopCommentModClient implements ClientModInitializer {
                 ModBlockEntities.TRIANGULAR_CAKE_BLOCK_ENTITY,
                 context -> new GeoBlockRenderer<TriangularCakeBlockEntity>(new TriangularCakeBlockModel())
         );
+    }
+
+    private static void registerEntityRenderers() {
+        EntityRendererRegistry.register(ModEntities.TEN_THOUSAND_TNT, TenThousandTntEntityRenderer::new);
     }
 }

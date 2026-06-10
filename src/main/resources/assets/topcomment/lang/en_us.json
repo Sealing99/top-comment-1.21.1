@@ -20,5 +20,8 @@
   "item.minecraft.splash_potion.effect.movement_potion": "Splash Potion of Movement Boost",
   "item.minecraft.lingering_potion.effect.movement_potion": "Lingering Potion of Movement Boost",
 
-  "entity.minecraft.villager.seal": "Seal"
+  "entity.minecraft.villager.seal": "Seal",
+
+  "entity.topcomment.ten_thousand_tnt": "Ten Thousand Times TNT",
+  "block.topcomment.ten_thousand_tnt": "Ten Thousand Times TNT"
 }

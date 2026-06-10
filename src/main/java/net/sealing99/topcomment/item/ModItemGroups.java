@@ -25,6 +25,7 @@ public class ModItemGroups {
                             entries.add(ModItems.CORN_SEED);
                             entries.add(ModItems.DORITO);
                             entries.add(ModItems.DORITO_BAG);
+                            entries.add(ModBlocks.TEN_THOUSAND_TNT);
                     })
 
                     .build()

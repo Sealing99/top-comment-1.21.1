@@ -19,6 +19,8 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(ModBlocks.THUNDER_KING);
 
         blockStateModelGenerator.registerCrop(ModBlocks.CORN_CROP, CornCropBlock.AGE, 0, 1, 2, 3, 4, 5, 6);
+
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.TEN_THOUSAND_TNT);
     }
 
     @Override

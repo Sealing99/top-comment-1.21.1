@@ -5,6 +5,7 @@ import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.registry.CompostingChanceRegistry;
 import net.sealing99.topcomment.block.ModBlocks;
 import net.sealing99.topcomment.effect.ModEffects;
+import net.sealing99.topcomment.entity.ModEntities;
 import net.sealing99.topcomment.item.ModItemGroups;
 import net.sealing99.topcomment.item.ModItems;
 import net.sealing99.topcomment.item.ModPotions;
@@ -30,6 +31,7 @@ public class TopCommentMod implements ModInitializer {
 		ModPotions.registerPotions();
 		ModVillagers.registerVillagers();
 		ModVillagerTrades.registerTrades();
+		ModEntities.registerModEntities();
 
 		CompostingChanceRegistry.INSTANCE.add(ModItems.CORN, 0.15f);
 	}

@@ -2,6 +2,7 @@ package net.sealing99.topcomment.block;
 
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
+import net.minecraft.block.Blocks;
 import net.minecraft.block.MapColor;
 import net.minecraft.block.piston.PistonBehavior;
 import net.minecraft.item.BlockItem;
@@ -45,6 +46,16 @@ public class ModBlocks {
                     .sounds(BlockSoundGroup.CROP)
                     .pistonBehavior(PistonBehavior.DESTROY)
                     .mapColor(MapColor.DARK_GREEN)
+            )
+    );
+
+    public static final Block TEN_THOUSAND_TNT = registerBlock("ten_thousand_tnt",
+            new net.sealing99.topcomment.block.custom.TenThousantTntBlock(AbstractBlock.Settings.create()
+                    .mapColor(MapColor.BRIGHT_RED)
+                    .breakInstantly()
+                    .sounds(BlockSoundGroup.GRASS)
+                    .burnable()
+                    .solidBlock(Blocks::never)
             )
     );
 
