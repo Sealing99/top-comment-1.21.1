@@ -29,6 +29,7 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.DORITO, Models.GENERATED);
         itemModelGenerator.register(ModItems.DORITO_BAG, Models.GENERATED);
         itemModelGenerator.register(ModItems.CORN, Models.GENERATED);
+        itemModelGenerator.register(ModItems.DIAMOND_SHARD, Models.GENERATED);
         // SEEDS ARE AUTOMATICALLY GENERATED
     }
 }

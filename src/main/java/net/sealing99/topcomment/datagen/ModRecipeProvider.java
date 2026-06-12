@@ -64,5 +64,16 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         FabricBrewingRecipeRegistryBuilder.BUILD.register(builder -> {
             builder.registerPotionRecipe(Potions.AWKWARD, ModItems.DORITO_BAG, ModPotions.MOVEMENT_POTION);
         });
+
+        offerReversibleCompactingRecipes(exporter, RecipeCategory.MISC, ModItems.DIAMOND_SHARD, RecipeCategory.MISC, Items.DIAMOND);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.SLINGSHOT, 1)
+                .pattern("ISI")
+                .pattern(" I ")
+                .pattern(" I ")
+                .input('I', Items.STICK)
+                .input('S', Items.STRING)
+                .criterion(hasItem(Items.STRING), conditionsFromItem(Items.STRING))
+                .offerTo(exporter);
     }
 }

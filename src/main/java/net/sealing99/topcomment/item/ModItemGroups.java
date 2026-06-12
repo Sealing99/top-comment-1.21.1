@@ -26,6 +26,8 @@ public class ModItemGroups {
                             entries.add(ModItems.DORITO);
                             entries.add(ModItems.DORITO_BAG);
                             entries.add(ModBlocks.TEN_THOUSAND_TNT);
+                            entries.add(ModItems.SLINGSHOT);
+                            entries.add(ModItems.DIAMOND_SHARD);
                     })
 
                     .build()

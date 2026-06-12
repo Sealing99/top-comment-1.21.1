@@ -23,5 +23,8 @@
   "entity.minecraft.villager.seal": "Seal",
 
   "entity.topcomment.ten_thousand_tnt": "Ten Thousand Times TNT",
-  "block.topcomment.ten_thousand_tnt": "Ten Thousand Times TNT"
+  "block.topcomment.ten_thousand_tnt": "Ten Thousand Times TNT",
+
+  "item.topcomment.slingshot": "Slingshot",
+  "item.topcomment.diamond_shard": "Diamond Shard"
 }

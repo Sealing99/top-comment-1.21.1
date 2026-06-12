@@ -1,0 +1,6 @@
+{
+  "parent": "topcomment:item/slingshot",
+  "textures": {
+    "layer0": "topcomment:item/slingshot_pulling_2"
+  }
+}
