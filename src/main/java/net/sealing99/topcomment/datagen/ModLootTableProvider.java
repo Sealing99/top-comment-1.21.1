@@ -20,6 +20,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
     public void generate() {
         addDrop(ModBlocks.TRIANGULAR_CAKE);
         addDrop(ModBlocks.THUNDER_KING);
+        addDrop(ModBlocks.TEN_THOUSAND_TNT);
 
         BlockStatePropertyLootCondition.Builder builder2 = BlockStatePropertyLootCondition.builder(ModBlocks.CORN_CROP)
                 .properties(StatePredicate.Builder.create().exactMatch(CornCropBlock.AGE, CornCropBlock.MAX_AGE-1));
