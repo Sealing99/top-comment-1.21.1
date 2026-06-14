@@ -8,7 +8,7 @@ import net.sealing99.topcomment.effect.ModEffects;
 import net.sealing99.topcomment.entity.ModEntities;
 import net.sealing99.topcomment.item.ModItemGroups;
 import net.sealing99.topcomment.item.ModItems;
-import net.sealing99.topcomment.item.ModPotions;
+import net.sealing99.topcomment.effect.ModPotions;
 import net.sealing99.topcomment.modify.ModLootModifier;
 import net.sealing99.topcomment.villager.ModVillagerTrades;
 import net.sealing99.topcomment.villager.ModVillagers;

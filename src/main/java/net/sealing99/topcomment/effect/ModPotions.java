@@ -1,4 +1,4 @@
-package net.sealing99.topcomment.item;
+package net.sealing99.topcomment.effect;
 
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.potion.Potion;
@@ -7,7 +7,6 @@ import net.minecraft.registry.Registry;
 import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.util.Identifier;
 import net.sealing99.topcomment.TopCommentMod;
-import net.sealing99.topcomment.effect.ModEffects;
 
 public class ModPotions {
     public static final RegistryEntry<Potion> MOVEMENT_POTION = registerPotion("movement_potion", new Potion(new StatusEffectInstance(ModEffects.MOVEMENT, 3600, 0)));

@@ -16,7 +16,7 @@ import net.minecraft.util.Identifier;
 import net.sealing99.topcomment.TopCommentMod;
 import net.sealing99.topcomment.block.ModBlocks;
 import net.sealing99.topcomment.item.ModItems;
-import net.sealing99.topcomment.item.ModPotions;
+import net.sealing99.topcomment.effect.ModPotions;
 
 import java.util.concurrent.CompletableFuture;
 
