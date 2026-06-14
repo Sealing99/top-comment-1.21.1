@@ -26,5 +26,14 @@
   "block.topcomment.ten_thousand_tnt": "Ten Thousand Times TNT",
 
   "item.topcomment.slingshot": "Slingshot",
-  "item.topcomment.diamond_shard": "Diamond Shard"
+  "item.topcomment.diamond_shard": "Diamond Shard",
+
+  "item.topcomment.emerite_ingot": "Emerite Ingot",
+  "block.topcomment.emerite_block": "Emerite Block",
+
+  "item.topcomment.emerite_helmet": "Emerite Helmet",
+  "item.topcomment.emerite_chestplate": "Emerite Chestplate",
+  "item.topcomment.emerite_leggings": "Emerite Leggings",
+  "item.topcomment.emerite_boots": "Emerite Boots"
+
 }

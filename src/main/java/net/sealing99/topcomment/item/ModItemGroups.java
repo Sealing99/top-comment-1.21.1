@@ -18,16 +18,30 @@ public class ModItemGroups {
                     .icon(() -> new net.minecraft.item.ItemStack(ModItems.BAGUETTE))
                     .entries((DisplayContext, entries) -> {
                             entries.add(ModItems.BAGUETTE);
+
                             entries.add(ModBlocks.TRIANGULAR_CAKE);
+
                             entries.add(ModBlocks.THUNDER_KING);
+
                             entries.add(ModItems.BANANA);
+
                             entries.add(ModItems.CORN);
                             entries.add(ModItems.CORN_SEED);
                             entries.add(ModItems.DORITO);
                             entries.add(ModItems.DORITO_BAG);
+
                             entries.add(ModBlocks.TEN_THOUSAND_TNT);
+
                             entries.add(ModItems.SLINGSHOT);
                             entries.add(ModItems.DIAMOND_SHARD);
+
+                            entries.add(ModItems.EMERITE_INGOT);
+                            entries.add(ModBlocks.EMERITE_BLOCK);
+
+                            entries.add(ModItems.EMERITE_HELMET);
+                            entries.add(ModItems.EMERITE_CHESTPLATE);
+                            entries.add(ModItems.EMERITE_LEGGINGS);
+                            entries.add(ModItems.EMERITE_BOOTS);
                     })
 
                     .build()

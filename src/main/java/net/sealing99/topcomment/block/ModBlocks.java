@@ -59,6 +59,10 @@ public class ModBlocks {
             )
     );
 
+    public static final Block EMERITE_BLOCK = registerBlock("emerite_block",
+            new Block(AbstractBlock.Settings.create().strength(4f)
+                    .requiresTool().sounds(BlockSoundGroup.NETHERITE)));
+
     private static Block registerTriangularCakeBlock(String name, Block block) {
         Registry.register(
                 Registries.ITEM, Identifier.of(TopCommentMod.MOD_ID, name),

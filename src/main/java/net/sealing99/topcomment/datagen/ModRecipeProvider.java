@@ -6,12 +6,15 @@ import net.fabricmc.fabric.api.registry.FabricBrewingRecipeRegistryBuilder;
 import net.minecraft.data.server.recipe.RecipeExporter;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
 import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
+import net.minecraft.data.server.recipe.SmithingTransformRecipeJsonBuilder;
 import net.minecraft.item.Items;
 import net.minecraft.potion.Potions;
+import net.minecraft.recipe.Ingredient;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.util.Identifier;
 import net.sealing99.topcomment.TopCommentMod;
+import net.sealing99.topcomment.block.ModBlocks;
 import net.sealing99.topcomment.item.ModItems;
 import net.sealing99.topcomment.item.ModPotions;
 
@@ -75,5 +78,54 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .input('S', Items.STRING)
                 .criterion(hasItem(Items.STRING), conditionsFromItem(Items.STRING))
                 .offerTo(exporter);
+
+        offerReversibleCompactingRecipes(exporter, RecipeCategory.MISC, ModItems.EMERITE_INGOT, RecipeCategory.MISC, ModBlocks.EMERITE_BLOCK);
+
+        SmithingTransformRecipeJsonBuilder.create(
+                Ingredient.EMPTY,
+                Ingredient.ofItems(Items.NETHERITE_INGOT),
+                Ingredient.ofItems(Items.EMERALD),
+                RecipeCategory.MISC,
+                ModItems.EMERITE_INGOT
+        )
+        .criterion(hasItem(Items.NETHERITE_INGOT), conditionsFromItem(Items.NETHERITE_INGOT))
+        .offerTo(exporter, "emerite_smithing_table");
+
+        SmithingTransformRecipeJsonBuilder.create(
+                        Ingredient.EMPTY,
+                        Ingredient.ofItems(Items.NETHERITE_HELMET),
+                        Ingredient.ofItems(ModItems.EMERITE_INGOT),
+                        RecipeCategory.COMBAT,
+                        ModItems.EMERITE_HELMET
+                )
+                .criterion(hasItem(ModItems.EMERITE_INGOT), conditionsFromItem(ModItems.EMERITE_INGOT))
+                .offerTo(exporter, Identifier.of(TopCommentMod.MOD_ID, "emerite_helmet_smithing"));
+        SmithingTransformRecipeJsonBuilder.create(
+                        Ingredient.EMPTY,
+                        Ingredient.ofItems(Items.NETHERITE_CHESTPLATE),
+                        Ingredient.ofItems(ModItems.EMERITE_INGOT),
+                        RecipeCategory.COMBAT,
+                        ModItems.EMERITE_CHESTPLATE
+                )
+                .criterion(hasItem(ModItems.EMERITE_INGOT), conditionsFromItem(ModItems.EMERITE_INGOT))
+                .offerTo(exporter, Identifier.of(TopCommentMod.MOD_ID, "emerite_chestplate_smithing"));
+        SmithingTransformRecipeJsonBuilder.create(
+                        Ingredient.EMPTY,
+                        Ingredient.ofItems(Items.NETHERITE_LEGGINGS),
+                        Ingredient.ofItems(ModItems.EMERITE_INGOT),
+                        RecipeCategory.COMBAT,
+                        ModItems.EMERITE_LEGGINGS
+                )
+                .criterion(hasItem(ModItems.EMERITE_INGOT), conditionsFromItem(ModItems.EMERITE_INGOT))
+                .offerTo(exporter, Identifier.of(TopCommentMod.MOD_ID, "emerite_leggings_smithing"));
+        SmithingTransformRecipeJsonBuilder.create(
+                        Ingredient.EMPTY,
+                        Ingredient.ofItems(Items.NETHERITE_BOOTS),
+                        Ingredient.ofItems(ModItems.EMERITE_INGOT),
+                        RecipeCategory.COMBAT,
+                        ModItems.EMERITE_BOOTS
+                )
+                .criterion(hasItem(ModItems.EMERITE_INGOT), conditionsFromItem(ModItems.EMERITE_INGOT))
+                .offerTo(exporter, Identifier.of(TopCommentMod.MOD_ID, "emerite_boots_smithing"));
     }
 }
